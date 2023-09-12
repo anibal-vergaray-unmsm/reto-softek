@@ -15,7 +15,7 @@ provider:
     Action:
       - dynamodb:*
     Resource:
-      - 'arn:aws:dynamodb:us-west-2:230420613994:table/Client'
+      - '*'
 
 functions:
   api:
