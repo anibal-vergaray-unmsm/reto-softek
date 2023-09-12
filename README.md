@@ -21,14 +21,21 @@ La aplicación es una plataforma de gestión financiera que permite realizar ope
     
 6.  **Jest:** Framework de pruebas unitarias para JavaScript y TypeScript ampliamente utilizado en el desarrollo de aplicaciones.
 
-8. **AWS Lambda:** Servicio de computación sin servidores de AWS que permite ejecutar código en respuesta a eventos, como solicitudes HTTP o cambios en la base de datos, sin preocuparse por la infraestructura subyacente.
+7. **AWS Lambda:** Servicio de computación sin servidores de AWS que permite ejecutar código en respuesta a eventos, como solicitudes HTTP o cambios en la base de datos, sin preocuparse por la infraestructura subyacente.
 
+## Scripts
+
+-  `build`: Compila el código para su despliegue en producción. 
+-  `start:dev`: Inicia la aplicación en un entorno de desarrollo local.
+-  `start:prod`: Inicia la aplicación utilizando el código previamente compilado. 
+-  `test`: Ejecuta pruebas unitarias. 
+-  `test:cov`: Muestra el informe de cobertura de las pruebas realizadas.
 
 ## Instalación
 
  ``1. Clonar el repositorio:`` 
 
-		git clone https://github.com/anibal-vergaray-unmsm/reto-softek.git
+		git clone url
  ``2. Instalar dependencias:`` 
 
 		npm install
@@ -58,14 +65,21 @@ La aplicación es una plataforma de gestión financiera que permite realizar ope
 
 		serverless deploy
 
-## Scripts
+## Pruebas Unitarias con Jest
 
--  `build`: Compila el código para su despliegue en producción. 
--  `start:dev`: Inicia la aplicación en un entorno de desarrollo local.
--  `start:prod`: Inicia la aplicación utilizando el código previamente compilado. 
--  `test`: Ejecuta pruebas unitarias. 
--  `test:cov`: Muestra el informe de cobertura de las pruebas realizadas.
+En este proyecto, las pruebas unitarias se encuentran en el mismo nivel que los archivos que se prueban. Utilizamos Jest, un framework de pruebas ampliamente reconocido en el mundo de JavaScript y TypeScript.
 
+Los componentes de la aplicación están acompañados con pruebas unitarias para garantizar su correcto funcionamiento y detectar problemas antes de desplegar la aplicación en un entorno de producción.
+- Para ejecutar las pruebas unitarias, utiliza el siguiente comando:
+
+		npm run test
+
+- Jest generará un informe detallado de las pruebas, incluyendo los resultados de cada una. Además, se puede utilizar el siguiente comando para obtener información sobre la cobertura de las pruebas:
+
+		npm run test:cov
+
+
+Este enfoque nos permite mantener un código confiable y de alta calidad en todo momento.
 ## Documentación en Swagger
 
 Este proyecto cuenta con documentación automática de la API utilizando Swagger. Puedes acceder a la documentación completa de la API visitando el endpoint `/swagger`. Swagger proporciona una interfaz interactiva que te permite explorar y probar los diferentes puntos finales de la API de manera sencilla y visual.
@@ -85,4 +99,3 @@ Para acceder a la documentación de Swagger, sigue estos pasos:
 4.  Puedes hacer clic en cada punto final para ver los detalles de la solicitud y la respuesta esperada, así como probar la API directamente desde la interfaz de Swagger.
     
 La documentación en Swagger facilita la comprensión y la interacción con la API, lo que simplifica el proceso de desarrollo y prueba de integraciones.
-
