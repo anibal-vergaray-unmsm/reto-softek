@@ -1,0 +1,26 @@
+service: reto-softek-api
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-jetpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-west-2
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - dynamodb:*
+    Resource:
+      - 'arn:aws:dynamodb:us-west-2:230420613994:table/Client'
+
+functions:
+  api:
+    handler: dist/lambda.handler
+    events:
+      - http:
+          method: any
+          path: /{any+}
