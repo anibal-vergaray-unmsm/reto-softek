@@ -28,7 +28,7 @@ La aplicación es una plataforma de gestión financiera que permite realizar ope
 
  ``1. Clonar el repositorio:`` 
 
-		git clone url
+		git clone https://github.com/anibal-vergaray-unmsm/reto-softek.git
  ``2. Instalar dependencias:`` 
 
 		npm install
